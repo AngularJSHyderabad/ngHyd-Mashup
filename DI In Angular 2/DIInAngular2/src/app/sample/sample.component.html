@@ -1,0 +1,20 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>Repo Name</th>
+			<th>Stars</th>
+			<th>Visit</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let repo of repos">
+			<th>{{repo.name}}</th>
+			<th>{{repo.numberOfStars}}</th>
+			<th><a [href]="repo.link" target="_blank">Visit</a></th>
+		</tr>
+	</tbody>
+</table>
+<br>
+<br>
+<button (click)="calculateArea()" class="btn">Calculate Area of circle</button>
+<div *ngIf="area">Area of the circle is: {{area}}</div>
